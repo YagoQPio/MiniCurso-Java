@@ -1,0 +1,27 @@
+package aplicacao;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		String product1 = "Computer";
+		String product2 = "Office desk";
+				
+		int age = 30;
+			int code = 5290;
+			char gender = 'F';
+				
+			double price1 = 2100.0;
+			double price2 = 650.0;
+			double measure = 53.234567;
+			
+			System.out.printf("o preco da computaria é %.2f", price1);
+			System.out.printf("\no preco da mesa é %.2f", price2);
+			System.out.printf("\nA idade é: %d", age);
+			System.out.printf("\nO CODIGO  é %d", code);
+			System.out.printf("\nO genero da pessoa é:%s", gender);
+			System.out.printf("\nOito casas decimais: %8f", measure);
+			System.out.printf("\nOito casas decimais: %.3f", measure);
+			
+	}
+
+}
