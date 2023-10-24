@@ -44,3 +44,57 @@ public class Programa {
 	        yg.close();
 	    }
 	}
+//////////////////////////////////////////////////////////////////////////////////
+package aplicacao;
+import java.util.Scanner;
+public class Programa {
+	public static void main(String[] args) {
+		Scanner yg = new Scanner(System.in);
+		
+		 System.out.print("Digite o primeiro numero: ");
+	        double num1 = yg.nextDouble();
+
+	        System.out.print("Digite o segundo numero: ");
+	        double  num2 = yg.nextDouble();
+	        
+	        System.out.println("+------------------+");
+	        System.out.println("|Escolha a operação|");
+	        System.out.println("| 1 - Soma         |");
+	        System.out.println("| 2 - Subtração    |");
+	        System.out.println("| 3 - Divisão      |");
+	        System.out.println("| 4 - Multiplicação|");
+	        System.out.println("+------------------+");
+
+	        System.out.print("Sua opcão: ");
+	        int codigoOperacao = yg.nextInt();
+
+	        double resultado = 0.0;
+
+	        switch (codigoOperacao) {
+	            case 1:
+	                resultado = num1 + num2;
+	                System.out.println("Resultado da Soma: " + resultado);
+	                break;
+	            case 2:
+	                resultado = num1 - num2;
+	                System.out.println("Resultado da Subtração: " + resultado);
+	                break;
+	            case 3:
+	                if (num2 != 0) {
+	                    resultado = num1 / num2;
+	                    System.out.println("Resultado da Divisão: " + resultado);
+	                } else {
+	                    System.out.println("Divisão por zero");
+	                }
+	                break;
+	            case 4:
+	                resultado = num1 * num2;
+	                System.out.println("Resultado da Multiplicação: " + resultado);
+	                break;
+	            default:
+	                System.out.println("Operação inválido.");
+	        }
+
+	        yg.close();
+	    }
+	}
