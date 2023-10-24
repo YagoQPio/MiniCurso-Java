@@ -16,3 +16,31 @@ public class Programa {
         yg.close();
     }
 }
+/////////////////////////////////////////////////////
+package aplicacao;
+import java.util.Scanner;
+public class Programa {
+	public static void main(String[] args) {
+		Scanner yg = new Scanner(System.in);
+		
+	       double basico = 50.00;
+	        int min = 100;
+	         double custo = 2.00;
+
+	        System.out.print("Digite a quantidade de minutos consumidos: ");
+	        int consumido = yg.nextInt();
+
+	        double valor;
+
+	        if (consumido <= min) {
+	            valor = basico;
+	        } else {
+	            int excedentes = consumido - min;
+	            valor = basico + (excedentes * custo);
+	        }
+
+	        System.out.println("Valor a ser pago: R$ " + valor);
+
+	        yg.close();
+	    }
+	}
