@@ -36,7 +36,7 @@ public class Programa {
         System.out.println("|               1. Soma dos números                     |");
         System.out.println("| 2. Produto do primeiro número pelo quadrado do segundo|");
         System.out.println("|               3. Quadrado do primeiro número          |");
-        System.out.println("|             4. Módulo do primeiro número              |");
+        System.out.println("|               4. Módulo do primeiro número            |");
         System.out.println("+-------------------------------------------------------+");
 
         int escolha = yg.nextInt();
