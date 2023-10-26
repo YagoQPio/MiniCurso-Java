@@ -1,0 +1,86 @@
+package aplicacao;
+import java.util.Scanner;
+public class Programa {
+	public static void main(String[] args) {
+		Scanner yg = new Scanner(System.in);
+		
+		 double salMin = 788.00;
+
+	        System.out.print("Digite o valor do salário: ");
+	        double sal = yg.nextDouble();
+
+	        double quatSal = calcular(salMin, sal);
+
+	        System.out.println("O usuário ganha " + quatSal + " salários mínimos.");
+	    }
+
+	    public static double calcular(double salarioMinimo, double salarioUsuario) {
+	        return salarioUsuario / salarioMinimo;
+	    }
+	}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+package aplicacao;
+import java.util.Scanner;
+public class Programa {
+	public static void main(String[] args) {
+		Scanner yg = new Scanner(System.in);
+		
+		System.out.print("Digite o primeiro número: ");
+        double num1 = yg.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double num2 = yg.nextDouble();
+
+        System.out.println("+-------------------------------------------------------+");
+        System.out.println("|                Escolha a operação:                    |");
+        System.out.println("|               1. Soma dos números                     |");
+        System.out.println("| 2. Produto do primeiro número pelo quadrado do segundo|");
+        System.out.println("|               3. Quadrado do primeiro número          |");
+        System.out.println("|             4. Módulo do primeiro número              |");
+        System.out.println("+-------------------------------------------------------+");
+
+        int escolha = yg.nextInt();
+
+        switch (escolha) {
+            case 1:
+                double soma = Soma(num1, num2);
+                System.out.println("a) A soma dos números é: " + soma);
+                break;
+            case 2:
+                double produtoQuadrado = Produto(num1, num2);
+                System.out.println("b) O produto do primeiro número pelo quadrado do segundo é: " + produtoQuadrado);
+                break;
+            case 3:
+                double quadradoNumero1 = Quadrado(num1);
+                System.out.println("c) O quadrado do primeiro número é: " + quadradoNumero1);
+                break;
+            case 4:
+                double moduloNumero1 = Modulo(num1);
+                System.out.println("d) O módulo do primeiro número é: " + moduloNumero1);
+                break;
+            default:
+                System.out.println("Opção inválida");
+        }
+    }
+
+    public static double Soma(double num1, double num2) {
+        return num1 + num2;
+    }
+
+    public static double Produto(double num1, double num2) {
+        return num1 * (num2 * num2);
+    }
+
+    public static double Quadrado(double num1) {
+        return num1 * num1;
+    }
+
+    public static double Modulo(double num1) {
+    	if (num1 < 0) {
+            return -num1;
+        } else {
+            return num1;
+        }
+   }
+
+    }
