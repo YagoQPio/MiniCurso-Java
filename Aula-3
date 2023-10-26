@@ -1,0 +1,21 @@
+package aplicacao;
+import java.util.Scanner;
+public class Programa {
+	public static void main(String[] args) {
+		Scanner yg = new Scanner(System.in);
+		
+		 double salMin = 788.00;
+
+	        System.out.print("Digite o valor do salário: ");
+	        double sal = yg.nextDouble();
+
+	        double quatSal = calcular(salMin, sal);
+
+	        System.out.println("O usuário ganha " + quatSal + " salários mínimos.");
+	    }
+
+	    public static double calcular(double salarioMinimo, double salarioUsuario) {
+	        return salarioUsuario / salarioMinimo;
+	    }
+	}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
