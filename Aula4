@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Programa {
+    public static void main(String[] args) throws Exception {
+     
+        Scanner yg = new Scanner(System.in);
+
+
+        int N = 0;
+        System.out.print("Digite o valor de N (ordem da matriz): ");
+        N = yg.nextInt();
+
+        int[][] matriz = new int[N][N];
+
+    
+        System.out.println("Preencha a matriz de ordem " + N + "x" + N + ":");
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                System.out.printf("Digite o valor para a posição [%d][%d]: ", i, j);
+                matriz[i][j] = yg.nextInt();
+            }
+        }
+
+        System.out.println("Diagonal Principal:");
+        for (int i = 0; i < N; i++) {
+            System.out.print(matriz[i][i] + " ");
+        }
+
+
+        int Negativos = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (matriz[i][j] < 0) {
+                    Negativos++;
+                }
+            }
+        }
+
+        System.out.println("\nQuantidade de valores negativos na matriz: " + Negativos);
+
+        yg.close();
+
+
+    }
+}
